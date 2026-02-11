@@ -834,7 +834,7 @@ video {
   text-align: center;
 
   background: transparent;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  text-shadow: 0 6px 25px rgba(0,0,0,0.6);
 }
 
 @media (max-width: 768px){
@@ -1009,6 +1009,7 @@ footer {
     color: white;
     margin-top: auto;
 }
+
 
 
 

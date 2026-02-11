@@ -121,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const caption = document.querySelector('.caption');
 
   const texts = [
-    "Jargal Photo",
-    "Newborn Photography",
-    "Maternity Moments"
+    "Жаргал фото",
+    "Жирэмсний зураг авалт",
+    "Нярайн зураг авалт"
   ];
 
   let index = 0;
@@ -276,6 +276,7 @@ function GalleryLightbox() {
     if(e.target===lightbox) closeLightbox();
   });
 }
+
 
 
 

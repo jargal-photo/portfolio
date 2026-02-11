@@ -96,33 +96,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Dropdown Portfolio
-const portfolioBtn = document.getElementById('portfolio-btn');
-const portfolioMenu = document.getElementById('portfolio-menu');
-const dropdown = portfolioBtn.closest('.dropdown');
-
-portfolioBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  portfolioMenu.classList.toggle('active');
-  dropdown.classList.toggle('open');
-});
-
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.dropdown')) {
-    portfolioMenu.classList.remove('active');
-    dropdown.classList.remove('open');
-  }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.slide');
   const dots = document.querySelectorAll('.dot');
   const prevBtn = document.querySelector('.prev');
   const nextBtn = document.querySelector('.next');
+  const caption = document.querySelector('.caption');
+
+  const texts = [
+    "Жаргал Фото",
+    "Жирэмсний зураг авалт",
+    "Нярайн зураг авалт"
+  ];
+
   let index = 0;
 
   function showSlide(i) {
-    slides.forEach((slide, n) => slide.classList.toggle('active', n === i));
-    dots.forEach((dot, n) => dot.classList.toggle('active', n === i));
+    slides.forEach((slide, n) => 
+      slide.classList.toggle('active', n === i)
+    );
+
+    dots.forEach((dot, n) => 
+      dot.classList.toggle('active', n === i)
+    );
+
+    // 👇 Текст солих
+    if (caption) {
+      caption.style.opacity = 0;
+
+      setTimeout(() => {
+        caption.textContent = texts[i];
+        caption.style.opacity = 1;
+      }, 300);
+    }
+
     index = i;
   }
 
@@ -134,16 +141,24 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide((index - 1 + slides.length) % slides.length);
   }
 
-  // Автоматаар 5 секунд тутам солигдох
+  // Эхний текст
+  if (caption) {
+    caption.textContent = texts[0];
+  }
+
   setInterval(nextSlide, 5000);
 
-  // Dots дээр дарвал тухайн slide руу шилжих
-  dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+  dots.forEach((dot, i) => 
+    dot.addEventListener('click', () => showSlide(i))
+  );
 
-  // Prev / Next товч дээр дарахад ажиллах
   if (prevBtn) prevBtn.addEventListener('click', prevSlide);
   if (nextBtn) nextBtn.addEventListener('click', nextSlide);
 });
+
+
+
+
 
 // Mobile menu toggle
 const menuToggle = document.getElementById('menu-toggle');
@@ -246,9 +261,6 @@ function GalleryLightbox() {
     if(e.target===lightbox) closeLightbox();
   });
 }
-
-
-
 
 
 

@@ -215,7 +215,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 8px 40px;
+  padding: 3px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -990,6 +990,7 @@ footer {
     color: white;
     margin-top: auto;
 }
+
 
 
 

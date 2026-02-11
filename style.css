@@ -822,7 +822,18 @@ video {
 }
 
 /* Thumbnail caption нуусан */
-.caption{ display: flex; }
+.caption{
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+
+  background: transparent;   /* Тунгалаг */
+  padding: 0;
+}
 
 /* Lightbox */
 .lightbox {
@@ -990,6 +1001,7 @@ footer {
     color: white;
     margin-top: auto;
 }
+
 
 
 

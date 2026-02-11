@@ -91,11 +91,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   requestAnimationFrame(animate);
-});
+});   
 
 
 
 // Dropdown Portfolio
+const portfolioBtn = document.getElementById('portfolio-btn');
+const portfolioMenu = document.getElementById('portfolio-menu');
+const dropdown = portfolioBtn.closest('.dropdown');
+
+portfolioBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  portfolioMenu.classList.toggle('active');
+  dropdown.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.dropdown')) {
+    portfolioMenu.classList.remove('active');
+    dropdown.classList.remove('open');
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.slide');
   const dots = document.querySelectorAll('.dot');
@@ -104,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const caption = document.querySelector('.caption');
 
   const texts = [
-    "Жаргал Фото",
-    "Жирэмсний зураг авалт",
-    "Нярайн зураг авалт"
+    "Jargal Photo",
+    "Newborn Photography",
+    "Maternity Moments"
   ];
 
   let index = 0;
@@ -155,8 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (prevBtn) prevBtn.addEventListener('click', prevSlide);
   if (nextBtn) nextBtn.addEventListener('click', nextSlide);
 });
-
-
 
 
 
@@ -261,6 +276,9 @@ function GalleryLightbox() {
     if(e.target===lightbox) closeLightbox();
   });
 }
+
+
+
 
 
 

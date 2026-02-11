@@ -822,7 +822,7 @@ video {
 }
 
 /* Thumbnail caption нуусан */
-.caption{ display:none; }
+.caption{ display: flex; }
 
 /* Lightbox */
 .lightbox {
@@ -990,6 +990,7 @@ footer {
     color: white;
     margin-top: auto;
 }
+
 
 
 

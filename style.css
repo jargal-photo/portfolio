@@ -211,15 +211,19 @@ body {
 
 /* -------------- Navigation хэсэг (цэс, лого г.м.) -------------- */
 nav {
-  width: 100%;
-  padding: 20px 60px;
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-shadow: 0 4px 10px rgba(0,0,0,100);
-  z-index: 20;
+  z-index: 9999;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 /* үндсэн menu */
@@ -986,6 +990,7 @@ footer {
     color: white;
     margin-top: auto;
 }
+
 
 
 

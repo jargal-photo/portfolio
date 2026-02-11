@@ -837,6 +837,12 @@ video {
   text-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
+@media (max-width: 768px){
+  .caption{
+    display: none;
+  }
+}
+
 /* Lightbox */
 .lightbox {
   position:fixed;
@@ -1003,6 +1009,7 @@ footer {
     color: white;
     margin-top: auto;
 }
+
 
 
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jargal Photo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="main">
+    
+  <!-- Navigation bar -->
+  <nav>
+    <!-- Logo -->
+    <a href="./" class="logo">
+      <img src="JargalPhoto.png">
+    </a>
+
+    <!-- Hamburger (гар утасны цэс товч) -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Menu -->
+    <ul class="menu" id="menu">
+      <li><a href="./" >Нүүр хуудас</a></li>
+      <li class="dropdown">
+        <a id="portfolio-btn">Бүтээлийн сан<i class="fa-solid fa-angle-down arrow"></i></a>
+        <ul class="submenu" id="portfolio-menu">
+          <li><a href="fine_art">Жирэмсний зураг авалт</a></li>
+          <li><a href="newborn">Нярайн зураг авалт</a></li>
+        </ul>
+      </li>
+      <li><a href="about">Холбоо барих</a></li>
+    </ul>
+
+    <!-- Social Icons -->
+    <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=61587214661322#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/jargal.photo/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </nav>
+
+<main class="fashion_gallery" id="gallery">
+
+  <a class="thumb" href="#" data-full="newborn/img1.jpg" aria-label="Image">
+    <img src="newborn/small/img1.jpg" alt="">
+  </a>
+  
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="lightbox-inner" id="lightboxInner">
+    <div class="info" id="imageInfo"></div>
+    <button class="close-btn" id="closeBtn" aria-label="Close (Esc)">✕</button>
+    <button class="nav-btn nav-prev" id="prevBtn" aria-label="Previous"><i class="fa-solid fa-angle-left"></i></button>
+    <button class="nav-btn nav-next" id="nextBtn" aria-label="Next"><i class="fa-solid fa-angle-right"></i></button>
+    <img src="" alt="" id="lightboxImg" class="lightbox-img" draggable="false">
+  </div>
+</div>
+
+
+<!-- Gallery JS -->
+<script src="gallery.js"></script>
+<script>
+  GalleryLightbox();  <!-- эндээс функцээ идэвхжүүлж байна -->
+</script>
+    </div>
+        <!-- Footer -->
+        <footer>© 2026 Jargal Photo</footer>
+    
+</div>
+
+<!-- Navbar JS -->
+<script src="script.js"></script>
+</body>
+</html>
